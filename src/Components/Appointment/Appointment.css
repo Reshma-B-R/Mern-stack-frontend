@@ -1,0 +1,67 @@
+body {
+  background-color: #f2fcff;
+  overflow-x: hidden;
+}
+
+/* ---------------- HEADER SECTION ---------------- */
+.appointment-header {
+  background: linear-gradient(rgba(0, 86, 141, 0.6), rgba(0, 86, 141, 0.6)),
+    url("https://images.unsplash.com/photo-1606813902919-0c7a7c72b1e2?auto=format&fit=crop&w=1200&q=80")
+      center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.appointment-header h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* Responsive header text */
+@media (max-width: 768px) {
+  .appointment-header {
+    padding: 80px 15px;
+  }
+
+  .appointment-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ---------------- FORM SECTION ---------------- */
+.appointment-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* Responsive form padding */
+@media (max-width: 576px) {
+  .appointment-form {
+    padding: 25px;
+    margin-top: -40px;
+  }
+}
+
+/* ---------------- BUTTON ---------------- */
+.btn-appoint {
+  background-color: #05668d;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-appoint:hover {
+  background-color: #028090;
+}

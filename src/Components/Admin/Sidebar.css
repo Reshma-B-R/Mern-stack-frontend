@@ -1,0 +1,183 @@
+/* ================================
+   DASHBOARD LAYOUT
+================================ */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+.sidebar {
+  width: 240px;
+  background: white;
+  padding: 20px;
+  border-right: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* menu */
+.menu-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #9ca3af;
+  letter-spacing: 1px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Logout button */
+.logout-item {
+  margin-top: 25px;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Close button (only mobile) */
+.close-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ================================
+   MOBILE TOPBAR
+================================ */
+.mobile-topbar {
+  display: none;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hamburger menu */
+.menu-btn {
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================================
+   SIDEBAR OVERLAY (MOBILE)
+================================ */
+.sidebar-overlay {
+  display: none;
+}
+
+/* ================================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  /* Show mobile topbar */
+  .mobile-topbar {
+    display: flex;
+  }
+
+  /* Sidebar becomes off-canvas */
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100%;
+    width: 240px;
+    transition: 0.3s ease;
+    z-index: 300;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Show close button */
+  .close-btn {
+    display: block;
+  }
+
+  /* Overlay */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 250;
+  }
+
+  /* Main content padding to avoid topbar overlap */
+  .main {
+    padding-top: 80px;
+  }
+}

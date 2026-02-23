@@ -1,0 +1,27 @@
+.service-box {
+  transition: all 0.3s ease;
+}
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.service-box img {
+  transition: transform 0.4s ease;
+}
+.service-box:hover img {
+  transform: scale(1.05);
+}
+ .contact-header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('../pro_images/clinic.jpg') center/cover no-repeat;
+      height: 50vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }

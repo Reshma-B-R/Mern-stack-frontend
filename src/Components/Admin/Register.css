@@ -1,0 +1,71 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+/* Main container */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   /* 👈 heading above form */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading */
+.Register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.Register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form card */
+.register-container form {
+  background: #ffffff;
+  padding: 30px 35px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Inputs */
+.register-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.register-container input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.4);
+}
+
+/* Button */
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-container button:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}

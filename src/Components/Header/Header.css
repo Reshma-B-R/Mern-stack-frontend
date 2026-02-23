@@ -1,0 +1,15 @@
+ .contact-header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('../pro_images/clinic.jpg') center/cover no-repeat;
+      height: 50vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+   

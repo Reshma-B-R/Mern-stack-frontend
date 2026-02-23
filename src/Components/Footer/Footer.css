@@ -1,0 +1,96 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Icon Circle */
+.icon-circle {
+    background-color: skyblue;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 20px auto 15px auto;
+}
+
+/* Global Social Icons (Used outside footer too) */
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: orange;
+    color: #111;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 0 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.footer p,
+.footer a {
+    font-size: 14px;
+    line-height: 24px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: orange;
+}
+
+/* Footer Icons only */
+.footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.footer .social-icons a:hover {
+    background-color: orange;
+    color: #111;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    color: #ccc;
+    font-size: 14px;
+}

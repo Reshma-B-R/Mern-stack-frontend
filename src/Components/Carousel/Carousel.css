@@ -1,0 +1,120 @@
+/* =======================
+   BASE IMAGE STYLING
+========================== */
+.carousel-img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  padding-top: 70px; /* navbar height */
+}
+
+/* =======================
+   TEXT BLOCK POSITION
+========================== */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-110%, -50%);
+  width: 40%;
+  max-width: 550px;
+  text-align: left;
+  color: #fff;
+}
+
+.centered p:first-child {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.centered p:nth-child(2) {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* =======================
+   APPOINTMENT BUTTON
+========================== */
+.btn-appointment {
+  background-color: rgba(135, 207, 235, 0.8);
+  border: 2px solid rgba(0, 191, 255, 0.7);
+  color: white !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-appointment:hover {
+  background-color: rgba(0, 191, 255, 0.85);
+  border-color: rgba(0, 191, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 191, 255, 0.4);
+}
+
+/* =======================
+   TABLETS (768px – 1024px)
+========================== */
+@media (max-width: 1024px) {
+  .centered {
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+
+  .centered p:first-child {
+    font-size: 2rem;
+  }
+}
+
+/* =======================
+   MOBILE (≤ 768px)
+========================== */
+@media (max-width: 768px) {
+  
+
+  .centered {
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered p:first-child {
+    font-size: 1.6rem;
+  }
+
+  .centered p:nth-child(2) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .btn-appointment {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+/* =======================
+   SMALL MOBILE (≤ 480px)
+========================== */
+@media (max-width: 480px) {
+ 
+  .centered p:first-child {
+    font-size: 1.3rem;
+  }
+
+  .centered p:nth-child(2) {
+    font-size: 0.8rem;
+  }
+
+  .btn-appointment {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,64 @@
+     .co{
+            color:rgb(16, 112, 149);
+        }
+        .icon-circle{
+            background-color:skyblue ;
+            color:white;
+           border-radius: 50%;
+           width:60px;
+           height:60px;
+           display: flex;
+           text-align: center;
+           justify-content: center;
+           align-items: center;
+           font-size: 24px;
+           margin:20px auto 15px auto;
+        
+        }
+        .service-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 123, 167, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Circular icon */
+.icon-circle {
+  background-color: #e0f7fa;
+  color: #0288d1;
+  font-size: 36px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.service-box h5 {
+  font-weight: 700;
+  color: #05668d;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .service-box {
+    margin-bottom: 20px;
+  }
+}

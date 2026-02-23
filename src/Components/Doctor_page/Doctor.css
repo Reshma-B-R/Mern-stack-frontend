@@ -1,0 +1,59 @@
+
+.co {
+      color: rgb(16, 112, 149);
+    }
+
+    .contact-header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('../pro_images/clinic.jpg') center/cover no-repeat;
+      height: 50vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    /* Doctor Card Styling */
+    .doctor-card {
+      background: #fff;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .doctor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(0, 180, 216, 0.2);
+    }
+    .doctor-img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .doctor-card h5 {
+      font-weight: 700;
+      color: #023047;
+    }
+    .doctor-card p {
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .doctor-social a {
+      color: #00b4d8;
+      font-size: 18px;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+    .doctor-social a:hover {
+      color: #023047;
+    }
+
+    

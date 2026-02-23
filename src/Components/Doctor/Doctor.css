@@ -1,0 +1,122 @@
+/* =========================
+   SECTION
+========================= */
+.doctor-section {
+  background-color: #f2fcff;
+  overflow-x: hidden;
+}
+
+/* =========================
+   CARD
+========================= */
+.doctor-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 20px 15px;
+  height: 100%; /* IMPORTANT */
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 123, 167, 0.15);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.doctor-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.doctor-card h5 {
+  color: #05668d;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.doctor-card p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.doctor-social {
+  display: flex;
+  justify-content: center;
+}
+
+.doctor-social a {
+  color: #05668d;
+  font-size: 18px;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.doctor-social a:hover {
+  color: #0288d1;
+}
+
+/* =========================
+   TABLET (≤992px)
+========================= */
+@media (max-width: 992px) {
+  .doctor-img {
+    height: 200px;
+  }
+}
+
+/* =========================
+   MOBILE (≤768px)
+========================= */
+@media (max-width: 768px) {
+  .doctor-card {
+    padding: 18px 12px;
+  }
+
+  .doctor-img {
+    height: 180px; /* KEY FIX */
+  }
+
+  .doctor-card h5 {
+    font-size: 1rem;
+  }
+
+  .doctor-card p {
+    font-size: 14px;
+  }
+
+  .doctor-social a {
+    font-size: 16px;
+    margin: 0 6px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤480px)
+========================= */
+@media (max-width: 480px) {
+  .doctor-img {
+    height: 160px;
+  }
+
+  .doctor-card {
+    padding: 15px 10px;
+  }
+
+  .doctor-social a {
+    font-size: 15px;
+  }
+}

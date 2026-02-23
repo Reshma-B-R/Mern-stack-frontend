@@ -1,0 +1,72 @@
+.working-hours-card {
+  background: linear-gradient(135deg, skyblue,rgb(16, 112, 149));
+  height: 100%;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.working-hours-card h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.working-hours-card ul {
+  padding: 0;
+  margin: 0;
+}
+
+.working-hours-card li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 0;
+}
+
+.working-hours-card li:last-child {
+  border-bottom: none;
+}
+
+.contact-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #e0f7fa;
+}
+
+/* Right image */
+.working-hours-img-container {
+  height: 100%;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.working-hours-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.working-hours-img-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .working-hours-card, .working-hours-img-container {
+    min-height: 350px;
+  }
+  .working-hours-card {
+    text-align: center;
+  }
+}
+
