@@ -39,7 +39,7 @@ const App = () => {
         setLoading(false);
         return;
       }
-      fetch("http://localhost:5000/auth/user",{
+      fetch("https://mern-stack-backend-mlwh.onrender.com/auth/user",{
         headers:{
           Authorization:`Bearer ${token}`,
         },
