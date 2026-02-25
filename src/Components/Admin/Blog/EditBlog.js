@@ -59,7 +59,7 @@ const EditBlog = ({ user }) => {
       });
 
       alert("Blog updated successfully!");
-      navigate("/Admin/dashboard/blog");
+      navigate("/admin/dashboard/blog");
     } catch (err) {
       console.log(err);
       alert("Error updating blog!");
@@ -79,13 +79,13 @@ const EditBlog = ({ user }) => {
         <nav>
           <p className="menu-title">MENU</p>
           <ul>
-            <li><NavLink to="/Admin/dashboard" end>Dashboard</NavLink></li>
-            <li><NavLink to="/Admin/dashboard/Appointment">Appointments</NavLink></li>
-            <li><NavLink to="/Admin/dashboard/patients">Patients</NavLink></li>
-            <li><NavLink to="/Admin/dashboard/doctors">Doctors</NavLink></li>
-            <li><NavLink to="/Admin/dashboard/services">Services</NavLink></li>
-            <li><NavLink to="/Admin/dashboard/blog">Blog</NavLink></li>
-            <li><NavLink to="/Admin/dashboard/reports">Reports</NavLink></li>
+            <li><NavLink to="/admin/dashboard" end>Dashboard</NavLink></li>
+            <li><NavLink to="/admin/dashboard/Appointment">Appointments</NavLink></li>
+            <li><NavLink to="/admin/dashboard/patients">Patients</NavLink></li>
+            <li><NavLink to="/admin/dashboard/doctors">Doctors</NavLink></li>
+            <li><NavLink to="/admin/dashboard/services">Services</NavLink></li>
+            <li><NavLink to="/admin/dashboard/blog">Blog</NavLink></li>
+            <li><NavLink to="/admin/dashboard/reports">Reports</NavLink></li>
           </ul>
         </nav>
         <div className="logout-section">
@@ -166,7 +166,7 @@ const EditBlog = ({ user }) => {
             <button
               type="button"
               className="cancel-btn"
-              onClick={() => navigate("/Admin/dashboard/blog")}
+              onClick={() => navigate("/admin/dashboard/blog")}
               style={{ marginLeft: "10px" }}
             >
               Cancel

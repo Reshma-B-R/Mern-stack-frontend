@@ -22,7 +22,7 @@ const EditService = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   /* ================= FETCH SERVICE ================= */
@@ -30,7 +30,7 @@ const EditService = ({ user, setUser }) => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/Admin/login", { replace: true });
+      navigate("/admin/login", { replace: true });
       return;
     }
 
@@ -47,7 +47,7 @@ const EditService = ({ user, setUser }) => {
         if (err.response?.status === 401) {
           localStorage.removeItem("token");
           setUser(null);
-          navigate("/Admin/login", { replace: true });
+          navigate("/admin/login", { replace: true });
         }
       });
   }, [id, navigate, setUser]);
@@ -86,7 +86,7 @@ const EditService = ({ user, setUser }) => {
       );
 
       alert("Service updated successfully!");
-      navigate("/Admin/dashboard/services");
+      navigate("/admin/dashboard/services");
     } catch (err) {
       console.error(err);
       alert("Failed to update service");
@@ -102,37 +102,37 @@ const EditService = ({ user, setUser }) => {
           <p className="menu-title">MENU</p>
           <ul>
             <li>
-              <NavLink to="/Admin/dashboard" end>
+              <NavLink to="/admin/dashboard" end>
                 Dashboard
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Admin/dashboard/Appointment">
+              <NavLink to="/admin/dashboard/Appointment">
                 Appointments
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Admin/dashboard/patients">
+              <NavLink to="/admin/dashboard/patients">
                 Patients
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Admin/dashboard/doctors">
+              <NavLink to="/admin/dashboard/doctors">
                 Doctors
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Admin/dashboard/services">
+              <NavLink to="/admin/dashboard/services">
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Admin/dashboard/blog">
+              <NavLink to="/admin/dashboard/blog">
                 Blog
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Admin/dashboard/reports">
+              <NavLink to="/admin/dashboard/reports">
                 Reports
               </NavLink>
             </li>
@@ -223,7 +223,7 @@ const EditService = ({ user, setUser }) => {
               type="button"
               className="cancel-btn"
               onClick={() =>
-                navigate("/Admin/dashboard/services")
+                navigate("/admin/dashboard/services")
               }
               style={{ marginLeft: "10px" }}
             >

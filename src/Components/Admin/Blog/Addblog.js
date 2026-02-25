@@ -38,7 +38,7 @@ const AddBlog = ({ user, setUser }) => {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      navigate("/Admin/dashboard/blog");
+      navigate("/admin/dashboard/blog");
     } catch (err) {
       console.error(err);
       alert("Error adding blog!");
@@ -49,7 +49,7 @@ const AddBlog = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   const handleNavClick = () => {
@@ -94,7 +94,7 @@ const AddBlog = ({ user, setUser }) => {
           <ul>
             <li>
               <NavLink
-                to="/Admin/dashboard"
+                to="/admin/dashboard"
                 end
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
@@ -107,7 +107,7 @@ const AddBlog = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -119,7 +119,7 @@ const AddBlog = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/patients"
+                to="/admin/dashboard/patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -131,7 +131,7 @@ const AddBlog = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -143,7 +143,7 @@ const AddBlog = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -155,7 +155,7 @@ const AddBlog = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -167,7 +167,7 @@ const AddBlog = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",

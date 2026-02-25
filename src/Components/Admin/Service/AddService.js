@@ -22,7 +22,7 @@ const AddService = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   /* ================= TOKEN CHECK (Same as Dashboard) ================= */
@@ -30,7 +30,7 @@ const AddService = ({ user, setUser }) => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/Admin/login");
+      navigate("/admin/login");
       return;
     }
   }, [navigate]);
@@ -76,7 +76,7 @@ const AddService = ({ user, setUser }) => {
       );
 
       alert("Service added successfully!");
-      navigate("/Admin/dashboard/services");
+      navigate("/admin/dashboard/services");
     } catch (err) {
       console.error("Failed to add service:", err);
 
@@ -84,7 +84,7 @@ const AddService = ({ user, setUser }) => {
       if (err.response?.status === 401) {
         localStorage.removeItem("token");
         setUser(null);
-        navigate("/Admin/login", { replace: true });
+        navigate("/admin/login", { replace: true });
       } else {
         alert("Error adding service");
       }
@@ -126,7 +126,7 @@ const AddService = ({ user, setUser }) => {
           <ul>
             <li>
               <NavLink
-                to="/Admin/dashboard"
+                to="/admin/dashboard"
                 end
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
@@ -140,7 +140,7 @@ const AddService = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -153,7 +153,7 @@ const AddService = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/patients"
+                to="/admin/dashboard/patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -166,7 +166,7 @@ const AddService = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -179,7 +179,7 @@ const AddService = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -192,7 +192,7 @@ const AddService = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -205,7 +205,7 @@ const AddService = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",

@@ -12,7 +12,7 @@ const Patient = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   // ✅ Fetch appointments with token check
@@ -20,7 +20,7 @@ const Patient = ({ user, setUser }) => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/Admin/login");
+      navigate("/admin/login");
       return;
     }
 
@@ -42,7 +42,7 @@ const Patient = ({ user, setUser }) => {
         if (err.response?.status === 401) {
           localStorage.removeItem("token");
           setUser(null);
-          navigate("/Admin/login", { replace: true });
+          navigate("/admin/login", { replace: true });
         }
       }
     };
@@ -94,7 +94,7 @@ const Patient = ({ user, setUser }) => {
           <ul>
             <li>
               <NavLink
-                to="/Admin/dashboard"
+                to="/admin/dashboard"
                 end
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
@@ -108,7 +108,7 @@ const Patient = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -121,7 +121,7 @@ const Patient = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Patients"
+                to="/admin/dashboard/Patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -134,7 +134,7 @@ const Patient = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -147,7 +147,7 @@ const Patient = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -160,7 +160,7 @@ const Patient = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -173,7 +173,7 @@ const Patient = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",

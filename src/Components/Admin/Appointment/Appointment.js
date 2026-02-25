@@ -13,7 +13,7 @@ const Appointment = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   // ✅ Check token + fetch appointments
@@ -21,7 +21,7 @@ const Appointment = ({ user, setUser }) => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/Admin/login");
+      navigate("/admin/login");
       return;
     }
 
@@ -43,7 +43,7 @@ const Appointment = ({ user, setUser }) => {
         if (err.response?.status === 401) {
           localStorage.removeItem("token");
           setUser(null);
-          navigate("/Admin/login", { replace: true });
+          navigate("/admin/login", { replace: true });
         }
       }
     };
@@ -52,7 +52,7 @@ const Appointment = ({ user, setUser }) => {
   }, [search, navigate, setUser]);
 
   const handleEdit = (id) => {
-    navigate(`/Admin/dashboard/Appointment/edit/${id}`);
+    navigate(`/admin/dashboard/Appointment/edit/${id}`);
   };
 
   const handleDelete = async (id) => {
@@ -151,7 +151,7 @@ const Appointment = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/patients"
+                to="/admin/dashboard/patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -164,7 +164,7 @@ const Appointment = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -177,7 +177,7 @@ const Appointment = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -190,7 +190,7 @@ const Appointment = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -203,7 +203,7 @@ const Appointment = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",

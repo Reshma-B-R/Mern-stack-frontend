@@ -70,7 +70,7 @@ const EditDoctor = ({ user }) => {
       );
 
       alert("Doctor updated successfully!");
-      navigate("/Admin/dashboard/doctors");
+      navigate("/admin/dashboard/doctors");
     } catch (err) {
       console.error(err);
       alert("Error updating doctor");
@@ -87,43 +87,43 @@ const EditDoctor = ({ user }) => {
           <p className="menu-title">MENU</p>
           <ul>
             <li>
-              <NavLink to="/Admin/dashboard" end>
+              <NavLink to="/admin/dashboard" end>
                 Dashboard
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Admin/dashboard/Appointment">
+              <NavLink to="/admin/dashboard/Appointment">
                 Appointments
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Admin/dashboard/Patients">
+              <NavLink to="/admin/dashboard/Patients">
                 Patients
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Admin/dashboard/doctors">
+              <NavLink to="/admin/dashboard/doctors">
                 Doctors
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Admin/dashboard/services">
+              <NavLink to="/admin/dashboard/services">
                 Services
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Admin/dashboard/blog">
+              <NavLink to="/admin/dashboard/blog">
                 Blog
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/Admin/dashboard/reports">
+              <NavLink to="/admin/dashboard/reports">
                 Reports
               </NavLink>
             </li>

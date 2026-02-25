@@ -39,7 +39,7 @@ const App = () => {
         setLoading(false);
         return;
       }
-      fetch("http://localhost:5000/auth/user",{
+      fetch("https://mern-stack-backend-mlwh.onrender.com/auth/user",{
         headers:{
           Authorization:`Bearer ${token}`,
         },
@@ -76,47 +76,47 @@ const App = () => {
            <Route path="/contact" element={<Contact/>}/>
            <Route path="/appointment" element={<Appointment />}/>
            {/* login */}
-                 <Route path="/Admin" element={user? (<Navigate to="/Admin/dashboard"/>):(<Login setUser={setUser}/>)} />
+                 <Route path="/admin" element={user? (<Navigate to="/admin/dashboard"/>):(<Login setUser={setUser}/>)} />
                  {/* <Route path="/" element={<Register />} /> */}
                  {/* login route */}
-                 <Route path="/Admin/login" element={user?(<Navigate to="/Admin/dashboard"/> ):(<Login setUser={setUser}/>)}/>
+                 <Route path="/admin/login" element={user?(<Navigate to="/admin/dashboard"/> ):(<Login setUser={setUser}/>)}/>
                   {/* Register */}
-                 <Route path="/Admin/register" element={<Register/>} />
+                 <Route path="/admin/register" element={<Register/>} />
                   {/* <Route path="/Admin/dashboard" element={user?(<Dashboard user={user} setUser={setUser}/>):(<Navigate to="/Admin/login"/>)} /> */}
-                  <Route path="/Admin/dashboard" element={<Dashboard user={user} setUser={setUser} />}/>
+                  <Route path="/admin/dashboard" element={<Dashboard user={user} setUser={setUser} />}/>
 
-                   <Route path="/Admin/dashboard/Appointment" element={<Appointments user={user} setUser={setUser} />}/>
-                  <Route path="/Admin/dashboard/patients" element={<Patient user={user} setUser={setUser}/>}/>
-                 <Route path="/Admin/dashboard/doctors" element={<Doctor user={user} setUser={setUser} />}/>
-                  <Route path="/Admin/dashboard/services" element={<Service user={user}  setUser={setUser}/>}/>
+                   <Route path="/admin/dashboard/Appointment" element={<Appointments user={user} setUser={setUser} />}/>
+                  <Route path="/admin/dashboard/patients" element={<Patient user={user} setUser={setUser}/>}/>
+                 <Route path="/admin/dashboard/doctors" element={<Doctor user={user} setUser={setUser} />}/>
+                  <Route path="/admin/dashboard/services" element={<Service user={user}  setUser={setUser}/>}/>
           
-                <Route path="/Admin/dashboard/Appointment/edit/:id" element={<EditAppointment user={user} setUser={setUser}/>}/>
-                <Route path="/Admin/dashboard/blog" element={<Blogs user={user} setUser={setUser}/>} />
+                <Route path="/admin/dashboard/Appointment/edit/:id" element={<EditAppointment user={user} setUser={setUser}/>}/>
+                <Route path="/admin/dashboard/blog" element={<Blogs user={user} setUser={setUser}/>} />
 
                <Route
-          path="/Admin/dashboard/edit-doctor/:id"
+          path="/admin/dashboard/edit-doctor/:id"
           element={<EditDoctor  user={user} setUser={setUser} />}
         />
-         <Route path="/Admin/dashboard/add-doctor" element={<AddDoctor  user={user} setUser={setUser}  />} />  
-         <Route path="/Admin/dashboard/services/add" element={<AddService  user={user} setUser={setUser} />} />
-<Route path="/Admin/dashboard/services/edit/:id" element={<EditService  user={user} setUser={setUser} />} />
+         <Route path="/admin/dashboard/add-doctor" element={<AddDoctor  user={user} setUser={setUser}  />} />  
+         <Route path="/admin/dashboard/services/add" element={<AddService  user={user} setUser={setUser} />} />
+<Route path="/admin/dashboard/services/edit/:id" element={<EditService  user={user} setUser={setUser} />} />
 
 
   <Route
-    path="/Admin/dashboard/blog/add"
+    path="/admin/dashboard/blog/add"
     element={<AddBlog  user={user} setUser={setUser} />}
   />
 
   <Route
-    path="/Admin/dashboard/blog/edit/:id"
+    path="/admin/dashboard/blog/edit/:id"
     element={<EditBlog  user={user} setUser={setUser} />}
   />
   <Route
-  path="/Admin/dashboard/reports"
+  path="/admin/dashboard/reports"
   element={<Report user={user} setUser={setUser}/>}
 />
 <Route
-  path="/Admin/dashboard/reports/add"
+  path="/admin/dashboard/reports/add"
   element={<AddReport  user={user} setUser={setUser} />}
 />
 

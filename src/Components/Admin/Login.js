@@ -31,7 +31,7 @@ const Login = ({ setUser }) => {
       localStorage.setItem("token", data.token);
       setUser(data.user);
 
-      navigate("/dashboard"); // change if needed
+      navigate("/admin/dashboard"); // change if needed
     } catch (error) {
       console.error("Login error:", error);
       alert("Server error. Please try again.");

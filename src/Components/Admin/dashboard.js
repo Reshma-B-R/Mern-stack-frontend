@@ -3,7 +3,7 @@ import "./dashboard.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const DentalAdminDashboard = ({ user, setUser }) => {
+const DentaladminDashboard = ({ user, setUser }) => {
   const [stats, setStats] = useState({
     appointments: 0,
     patients: 0,
@@ -18,14 +18,14 @@ const DentalAdminDashboard = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/Admin/login");
+      navigate("/admin/login");
       return;
     }
 
@@ -48,7 +48,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
         if (err.response?.status === 401) {
           localStorage.removeItem("token");
           setUser(null);
-          navigate("/Admin/login", { replace: true });
+          navigate("/admin/login", { replace: true });
         }
       }
     };
@@ -100,7 +100,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
           <ul>
             <li>
               <NavLink
-                to="/Admin/dashboard"
+                to="/admin/dashboard"
                 end
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
@@ -114,7 +114,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -127,7 +127,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/patients"
+                to="/admin/dashboard/patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -140,7 +140,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -153,7 +153,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -166,7 +166,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -179,7 +179,7 @@ const DentalAdminDashboard = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -244,4 +244,4 @@ const DentalAdminDashboard = ({ user, setUser }) => {
   );
 };
 
-export default DentalAdminDashboard;
+export default DentaladminDashboard;

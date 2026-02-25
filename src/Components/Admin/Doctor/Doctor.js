@@ -12,7 +12,7 @@ const Doctors = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   /* ================= FETCH DOCTORS ================= */
@@ -20,7 +20,7 @@ const Doctors = ({ user, setUser }) => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/Admin/login");
+      navigate("/admin/login");
       return;
     }
 
@@ -39,7 +39,7 @@ const Doctors = ({ user, setUser }) => {
         if (err.response?.status === 401) {
           localStorage.removeItem("token");
           setUser(null);
-          navigate("/Admin/login", { replace: true });
+          navigate("/admin/login", { replace: true });
         }
       }
     };
@@ -110,7 +110,7 @@ const Doctors = ({ user, setUser }) => {
           <ul>
             <li>
               <NavLink
-                to="/Admin/dashboard"
+                to="/admin/dashboard"
                 end
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
@@ -124,7 +124,7 @@ const Doctors = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -137,7 +137,7 @@ const Doctors = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Patients"
+                to="/admin/dashboard/Patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -150,7 +150,7 @@ const Doctors = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -163,7 +163,7 @@ const Doctors = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -176,7 +176,7 @@ const Doctors = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -189,7 +189,7 @@ const Doctors = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -219,7 +219,7 @@ const Doctors = ({ user, setUser }) => {
         <h2>Doctors</h2>
 
         <div className="doctors-header">
-          <Link to="/Admin/dashboard/add-doctor">
+          <Link to="/admin/dashboard/add-doctor">
             <button className="add-btn">+ Add Doctor</button>
           </Link>
         </div>
@@ -276,7 +276,7 @@ const Doctors = ({ user, setUser }) => {
                   </td>
 
                   <td>
-                    <Link to={`/Admin/dashboard/edit-doctor/${doc._id}`}>
+                    <Link to={`/admin/dashboard/edit-doctor/${doc._id}`}>
                       <button>Edit</button>
                     </Link>
                     <button

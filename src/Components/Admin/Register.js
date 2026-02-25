@@ -19,7 +19,7 @@ const Register = () => {
         password,
       });
       alert(res.data.message);
-      navigate("/Admin");
+      navigate("/admin");
     } catch (err) {
       console.error(err.response?.data || err.message);
       alert(err.response?.data?.message || "Registration failed");

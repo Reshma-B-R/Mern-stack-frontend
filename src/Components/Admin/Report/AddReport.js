@@ -17,7 +17,7 @@ const AddReport = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser?.(null); // prevents crash if setUser is undefined
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   const handleSubmit = async (e) => {
@@ -41,7 +41,7 @@ const AddReport = ({ user, setUser }) => {
       });
 
       alert("Report uploaded successfully");
-      navigate("/Admin/dashboard/reports");
+      navigate("/admin/dashboard/reports");
     } catch (err) {
       console.error(err);
       alert("Failed to upload report");
@@ -84,14 +84,14 @@ const AddReport = ({ user, setUser }) => {
           <p className="menu-title">MENU</p>
           <ul>
             <li>
-              <NavLink to="/Admin/dashboard" end onClick={handleNavClick}>
+              <NavLink to="/admin/dashboard" end onClick={handleNavClick}>
                 Dashboard
               </NavLink>
             </li>
 
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
               >
                 Appointments
@@ -100,7 +100,7 @@ const AddReport = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/patients"
+                to="/admin/dashboard/patients"
                 onClick={handleNavClick}
               >
                 Patients
@@ -109,7 +109,7 @@ const AddReport = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
               >
                 Doctors
@@ -118,7 +118,7 @@ const AddReport = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
               >
                 Services
@@ -127,7 +127,7 @@ const AddReport = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
               >
                 Blog
@@ -136,7 +136,7 @@ const AddReport = ({ user, setUser }) => {
 
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
               >
                 Reports

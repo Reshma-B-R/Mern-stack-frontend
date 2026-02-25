@@ -32,7 +32,7 @@ const Report = ({ user, setUser }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
-    navigate("/Admin/login", { replace: true });
+    navigate("/admin/login", { replace: true });
   };
 
   const handleNavClick = () => {
@@ -71,7 +71,7 @@ const Report = ({ user, setUser }) => {
           <ul>
             <li>
               <NavLink
-                to="/Admin/dashboard"
+                to="/admin/dashboard"
                 end
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
@@ -84,7 +84,7 @@ const Report = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/Appointment"
+                to="/admin/dashboard/Appointment"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -96,7 +96,7 @@ const Report = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/patients"
+                to="/admin/dashboard/patients"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -108,7 +108,7 @@ const Report = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/doctors"
+                to="/admin/dashboard/doctors"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -120,7 +120,7 @@ const Report = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/services"
+                to="/admin/dashboard/services"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -132,7 +132,7 @@ const Report = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/blog"
+                to="/admin/dashboard/blog"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -144,7 +144,7 @@ const Report = ({ user, setUser }) => {
             </li>
             <li>
               <NavLink
-                to="/Admin/dashboard/reports"
+                to="/admin/dashboard/reports"
                 onClick={handleNavClick}
                 style={({ isActive }) => ({
                   color: isActive ? "#ff6b35" : "#374151",
@@ -177,7 +177,7 @@ const Report = ({ user, setUser }) => {
         <div className="doctors-header">
           <button
             className="add-btn"
-            onClick={() => navigate("/Admin/dashboard/reports/add")}
+            onClick={() => navigate("/admin/dashboard/reports/add")}
           >
             + Add Report
           </button>
