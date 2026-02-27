@@ -54,7 +54,7 @@ const EditBlog = ({ user }) => {
       // only send new image if selected
       if (newImage) data.append("image", newImage);
 
-      await axios.put(`https://mern-stack-backend-mlwh.onrender.com//blogs/${id}`, data, {
+      await axios.put(`https://mern-stack-backend-mlwh.onrender.com/blogs/${id}`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

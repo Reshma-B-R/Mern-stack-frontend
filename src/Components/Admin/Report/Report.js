@@ -222,7 +222,7 @@ const Report = ({ user, setUser }) => {
                       <button
                         onClick={() =>
                           setPreviewPdf(
-                            `https://mern-stack-backend-mlwh.onrender.com//uploads/reports/${r.pdfFile}`
+                            `https://mern-stack-backend-mlwh.onrender.com/uploads/reports/${r.pdfFile}`
                           )
                         }
                       >

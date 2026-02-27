@@ -64,7 +64,7 @@ const EditDoctor = ({ user }) => {
       }
 
       await axios.put(
-        `https://mern-stack-backend-mlwh.onrender.com//doctors/${id}`,
+        `https://mern-stack-backend-mlwh.onrender.com/doctors/${id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

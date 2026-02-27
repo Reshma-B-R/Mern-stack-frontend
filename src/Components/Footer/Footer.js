@@ -46,7 +46,7 @@ export default function Footer() {
               </p>
               <p><i className="bi bi-telephone-fill"></i> +91 9876543210</p>
               <p><i className="bi bi-envelope-fill"></i> info@brightsmile.com</p>
-
+              <Link to='/admin/login'>Admin</Link>
               <div className="social-icons mt-3">
                 <Link to="#"><i className="bi bi-facebook"></i></Link>
                 <Link to="#"><i className="bi bi-instagram"></i></Link>
