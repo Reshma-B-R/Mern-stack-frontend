@@ -24,7 +24,7 @@ const Report = ({ user, setUser }) => {
 
   const deleteReport = async (id) => {
     if (window.confirm("Delete this report?")) {
-      await axios.delete(`https://mern-stack-backend-mlwh.onrender.com//reports/${id}`);
+      await axios.delete(`https://mern-stack-backend-mlwh.onrender.com/reports/${id}`);
       fetchReports();
     }
   };
